@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1><%= category %> bo'limidagi mahsulotlar</h1>
+  <a href="/">⬅️ Orqaga</a>
+  <div class="products">
+    <% products.forEach(product => { %>
+      <div class="product-card">
+        <img src="/images/<%= product.image %>" alt="<%= product.name %>">
+        <h3><%= product.name %></h3>
+        <p><%= product.price %></p>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
+
